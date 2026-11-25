@@ -7,7 +7,7 @@
   <a href="https://npmx.dev/package/@tiesen/effect-tanstack-query">
     <img src="https://img.shields.io/npm/dw/%40tiesen%2Feffect-tanstack-query" alt="npm downloads">
   </a>
-  <a href="https://github.com/tiesen243/effect-tanstack-query/blob/main/LICENSE">
+  <a href="https://github.com/tiesen243-alt/effect-tanstack-query/blob/main/LICENSE">
     <img src="https://img.shields.io/npm/l/%40tiesen%2Feffect-tanstack-query" alt="license">
   </a>
 </p>

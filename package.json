@@ -17,7 +17,7 @@
     "vue-query"
   ],
   "bugs": {
-    "url": "https://github.com/tiesen243/effect-tanstack-query/issues"
+    "url": "https://github.com/tiesen243-alt/effect-tanstack-query/issues"
   },
   "license": "MIT",
   "author": {
@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tiesen243/effect-tanstack-query.git"
+    "url": "git+https://github.com/tiesen243-alt/effect-tanstack-query.git"
   },
   "files": [
     "dist"
@@ -60,17 +60,17 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@types/react": "^19.3.0",
+    "@types/react": "^19.3.1",
     "@types/vue": "^2.0.0",
-    "oxfmt": "^0.78.0",
-    "oxlint": "^1.93.0",
+    "oxfmt": "^0.80.0",
+    "oxlint": "^1.95.0",
     "tegami": "^1.5.0",
     "tsdown": "^0.23.7",
     "typescript": "^7.0.2"
   },
   "peerDependencies": {
-    "@tanstack/query-core": ">=5.104.1",
-    "effect": ">=4.0.2",
+    "@tanstack/query-core": ">=5.108.4",
+    "effect": ">=4.1.5",
     "react": ">=19.0.0",
     "vue": ">=3.5.43"
   },
@@ -85,7 +85,7 @@
   "devEngines": {
     "packageManager": {
       "name": "bun",
-      "version": "1.4.4",
+      "version": "1.4.5",
       "onFail": "download"
     }
   },

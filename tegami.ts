@@ -11,7 +11,7 @@ const paper = tegami({
 
   plugins: [
     github({
-      repo: 'tiesen243/effect-tanstack-query',
+      repo: 'tiesen243-alt/effect-tanstack-query',
       versionPr: {
         base: 'main',
       },
