@@ -22,5 +22,5 @@ jobs:
       - name: Version & publish packages
         run: bun tegami ci
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
           NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
