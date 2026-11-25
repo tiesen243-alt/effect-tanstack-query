@@ -1,3 +1,10 @@
+## @tiesen/effect-tanstack-query@0.0.28
+
+### Patch Changes
+
+- Bump deps
+- Migrate to new repo
+
 ## @tiesen/effect-tanstack-query@0.0.27
 
 ### Bug Fixes
