@@ -1,3 +1,10 @@
+## @tiesen/effect-tanstack-query@0.0.29
+
+### Bug Fixes
+
+- Fix exponential retry backoff schedule for subscriptions.
+- Enforce a maximum retry delay of 30 seconds while preserving jitter.
+
 ## @tiesen/effect-tanstack-query@0.0.28
 
 ### Patch Changes
