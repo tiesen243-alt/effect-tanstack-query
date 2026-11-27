@@ -1,10 +1,10 @@
 core:changelogs:
-  - content: "---\npackages:\n  npm:@tiesen/effect-tanstack-query:\n    type: patch\n---\n\n## Patch Changes\n\n- Bump deps\n- Migrate to new repo\n"
-    filename: 2026-11-25-mwviz862.md
+  - content: "---\npackages:\n  npm:@tiesen/effect-tanstack-query:\n    type: patch\n---\n\n## Bug Fixes\n\n- Fix exponential retry backoff schedule for subscriptions.\n- Enforce a maximum retry delay of 30 seconds while preserving jitter.\n"
+    filename: 2026-11-27-mwyin5io.md
     v: 0.0.0
 core:packages:
   - changelogIds:
-      - 2026-11-25-mwviz862.md
+      - 2026-11-27-mwyin5io.md
     id: npm:@tiesen/effect-tanstack-query
     updated: true
 npm:packages:
