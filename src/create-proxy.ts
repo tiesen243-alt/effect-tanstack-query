@@ -5,6 +5,7 @@ import type { Service } from 'effect/Context'
 import type { HttpClientResponse } from 'effect/http/HttpClientResponse'
 import type { ManagedRuntime } from 'effect/ManagedRuntime'
 
+import * as Duration from 'effect/Duration'
 import * as Effect from 'effect/Effect'
 import * as Sse from 'effect/encoding/Sse'
 import * as Fiber from 'effect/Fiber'
@@ -154,12 +155,6 @@ export function createTanstackQueryOptionsProxy<TServiceTag, TService>(
                 const { onStarted, onData, onError, onConnectionChange } =
                   events
 
-                const schedulePolicy = Schedule.max([
-                  Schedule.exponential(autoReconnect ?? 0),
-                  Schedule.spaced('30 seconds'),
-                  Schedule.recurs(3),
-                ]).pipe(Schedule.jittered)
-
                 const baseHandler = Effect.gen(function* handlerGen() {
                   onConnectionChange?.({ status: 'connecting' })
                   onStarted?.()
@@ -228,7 +223,18 @@ export function createTanstackQueryOptionsProxy<TServiceTag, TService>(
                 )
 
                 const handlerWithReconnect = autoReconnect
-                  ? baseHandler.pipe(Effect.retry(schedulePolicy))
+                  ? baseHandler.pipe(
+                      Effect.retry(
+                        Schedule.exponential(autoReconnect).pipe(
+                          Schedule.jittered,
+                          Schedule.modifyDelay(({ duration }) =>
+                            Effect.succeed(
+                              Duration.min(duration, Duration.seconds(30))
+                            )
+                          )
+                        )
+                      )
+                    )
                   : baseHandler
 
                 const handlerWithInterrupt = handlerWithReconnect.pipe(
